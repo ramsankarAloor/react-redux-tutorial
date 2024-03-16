@@ -4,19 +4,19 @@ import classes from './Counter.module.css';
 
 const Counter = () => {
   const dispatch = useDispatch();
-  const counter = useSelector(state => state.counter);
-  const show = useSelector(state=> state.showCounter)
+  const counter = useSelector(state => state.counter.counter);
+  const show = useSelector(state=> state.counter.showCounter)
   
   function incrementHandler(){
     dispatch(counterActions.increment())
   }
 
   function increase(){
-    dispatch(counterActions.increase(5)) // bracket nu ullil kodukkunna sadanam by default payload aait edukkum.
+    dispatch(counterActions.increase(5)) 
   }
 
   function decrementHandler(){
-    dispatch(counterActions.decrement()) // dispatch nte ullil kodukkunna sadanam aan action, function call cheyyunath enthina nn vecha, aa call action return cheyyum, athaan nammal argument aait kodukendath.
+    dispatch(counterActions.decrement()) 
   }
 
   const toggleCounterHandler = () => {
